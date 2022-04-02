@@ -2,7 +2,7 @@ require("dotenv").config()
 
 const express = require("express") //initiating web service
 const cors = require("cors") 
-const dbConnect = require('./config/mongo') //calling the functions from mongo
+const dbConnect = require('./config/mongo') //calling the functions from mongo.js
 const app = express() // instantiating the app
 
 app.use(cors()) //using cors library
@@ -19,4 +19,5 @@ app.listen(port, () => {
     console.log(`http://localhost:${port}`)
 })
 
+//Connection to the DB
 dbConnect()
